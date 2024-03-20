@@ -28,3 +28,13 @@
     alter table produtos add column categoria_id integer;
     update produtos set categoria_id = 1;
     ```
+
+## Configurando AKS
+- Acessar [Azure](https://portal.azure.com/)
+    - Criar um recurso -> Contêineres -> Kubernetes Service
+        >Criar grupo de recursos (caso não exista), por exemplo, `<nome>-rg`
+
+        >**Nome do cluster do Kubernetes** e **Prefixo do nome DNS** podem ser iguais, por exemplo, `nome-k8s`
+        
+        >Na configuração de escala o valor do tamanho será aplicado para todos os nós.
+        Já a contagem de nós **NÃO** deve incluir o master (abstraído pelo AKS), mas sim as máquinas que de fato farão o trabalho.
