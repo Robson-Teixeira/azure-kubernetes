@@ -1,3 +1,7 @@
+## Ferramentas
+
+- [Azure CLI](https://learn.microsoft.com/pt-br/cli/azure/)
+
 ## Sequência deploy
 
 - db
@@ -32,9 +36,18 @@
 ## Configurando AKS
 - Acessar [Azure](https://portal.azure.com/)
     - Criar um recurso -> Contêineres -> Kubernetes Service
-        >Criar grupo de recursos (caso não exista), por exemplo, `<nome>-rg`
+        >Criar grupo de recursos (caso não exista), por exemplo, `nome-rg`
 
         >**Nome do cluster do Kubernetes** e **Prefixo do nome DNS** podem ser iguais, por exemplo, `nome-k8s`
         
         >Na configuração de escala o valor do tamanho será aplicado para todos os nós.
         Já a contagem de nós **NÃO** deve incluir o master (abstraído pelo AKS), mas sim as máquinas que de fato farão o trabalho.
+
+        >O **Service Principal** será utilizado para criação e dimensionamento das VM's, inibindo assim a necessidade de uma conta administradora do Azure. Além disso, as aplicações o usarão por meio de **ClientID** e **ClientSecret**
+
+## Comandos
+
+> Necessário Azure CLI instalado
+
+- `az login` login no Azure
+- `az aks get-credentials --name <nome-cluster> --resource-group <nome-resource-group>` obter credenciais (contexto de conexão) do recurso AKS para o cluster e resource group especificados
