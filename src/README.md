@@ -49,6 +49,8 @@
 
         >O **Service Principal** será utilizado para criação e dimensionamento das VM's, inibindo assim a necessidade de uma conta administradora do Azure. Além disso, as aplicações o usarão por meio de **ClientID** e **ClientSecret**
 
+        >Para atualizar o cluster, ir até configurações e evoluir de 1 em 1 o 2º número da versão
+
 ## Comandos
 
 > Necessário Azure CLI instalado
