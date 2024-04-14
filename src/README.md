@@ -1,3 +1,7 @@
+## Definições
+- AKS: Azure Kubernetes Service
+- ACR: Azure Container Registry
+
 ## Ferramentas
 
 - [Azure CLI](https://learn.microsoft.com/pt-br/cli/azure/)
@@ -51,3 +55,13 @@
 
 - `az login` login no Azure
 - `az aks get-credentials --name <nome-cluster> --resource-group <nome-resource-group>` obter credenciais (contexto de conexão) do recurso AKS para o cluster e resource group especificados
+- `az acr login --name <nomeregistry>` login no ACR
+- `docker tag <nome-usuário/nome-imagem>:versão <nomeregistry.azurecr.io>/<pasta>/<nome-imagem>:versão` registrar versão no ACR
+- `docker push <nomeregistry.azurecr.io>/<pasta>/<nome-imagem>:versão` subir versão para o ACR
+
+## Configurando ACR
+- Acessar [Azure](https://portal.azure.com/)
+    - Criar um recurso -> Contêineres -> Registro de Contêiner
+        >Nome do registro `nomeregistry.azurecr.io`
+        >Criar grupo de recursos (caso não exista), por exemplo, `nome-rg`
+        >Habilitar `Usuário administrador`
