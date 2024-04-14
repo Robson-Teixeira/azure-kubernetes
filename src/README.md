@@ -58,6 +58,7 @@
 - `az acr login --name <nomeregistry>` login no ACR
 - `docker tag <nome-usuário/nome-imagem>:versão <nomeregistry.azurecr.io>/<pasta>/<nome-imagem>:versão` registrar versão no ACR
 - `docker push <nomeregistry.azurecr.io>/<pasta>/<nome-imagem>:versão` subir versão para o ACR
+- `kubectl create secret docker-registry <nomeregistry.secret> --docker-server <nomeregistry.azurecr.io> --docker-username <usuário-administrador-registry> --docker-password <senha-administrador-registry> --docker-email <e-mail>` cria secret no ACR
 
 ## Configurando ACR
 - Acessar [Azure](https://portal.azure.com/)

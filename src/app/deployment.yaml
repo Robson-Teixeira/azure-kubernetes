@@ -10,7 +10,7 @@ spec:
     spec:
       containers:
         - name: container-aplicacao-loja
-          image: rafanercessian/aplicacao-loja:v1
+          image: rafanercessian/aplicacao-loja:v1 #ACR: <nomeregistry.azurecr.io>/<pasta>/<nome-imagem>:versão
           ports:
             - containerPort: 80
   selector:
