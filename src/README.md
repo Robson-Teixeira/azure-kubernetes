@@ -61,6 +61,10 @@
 - `az group create --name <nome-grupo-rg> --location eastus` criar grupo de recursos na região Leste dos EUA
 - `az group list` listar grupo de recursos
     - `az group list --output table` formata o output no modo tabela
+- `az aks get-versions --location eastus --output table` listar versões Kubernetes por localidade
+- `az aks create -h` ajuda para o comando `create`
+    - `az aks create --name <nome-k8s> --kubernetes-version "<versão>" --node-count <valor> --resource-group <nome-grupo-rg> --location eastus --generate-ssh-keys` cria cluster AKS. Especificado a versão, quantidade de máquinas, grupo de recursos, localização e a chave para a comunicação entre as máquinas e master
+- `az aks list --output table` listar clusters
 - `docker tag <nome-usuário/nome-imagem>:versão <nomeregistry.azurecr.io>/<pasta>/<nome-imagem>:versão` registrar versão no ACR
 - `docker push <nomeregistry.azurecr.io>/<pasta>/<nome-imagem>:versão` subir versão para o ACR
 - `kubectl create secret docker-registry <nomeregistry.secret> --docker-server <nomeregistry.azurecr.io> --docker-username <usuário-administrador-registry> --docker-password <senha-administrador-registry> --docker-email <e-mail>` cria secret no ACR
