@@ -58,6 +58,9 @@
 - `az login` login no Azure
 - `az aks get-credentials --name <nome-cluster> --resource-group <nome-resource-group>` obter credenciais (contexto de conexão) do recurso AKS para o cluster e resource group especificados
 - `az acr login --name <nomeregistry>` login no ACR
+- `az group create --name <nome-grupo-rg> --location eastus` criar grupo de recursos na região Leste dos EUA
+- `az group list` listar grupo de recursos
+    - `az group list --output table` formata o output no modo tabela
 - `docker tag <nome-usuário/nome-imagem>:versão <nomeregistry.azurecr.io>/<pasta>/<nome-imagem>:versão` registrar versão no ACR
 - `docker push <nomeregistry.azurecr.io>/<pasta>/<nome-imagem>:versão` subir versão para o ACR
 - `kubectl create secret docker-registry <nomeregistry.secret> --docker-server <nomeregistry.azurecr.io> --docker-username <usuário-administrador-registry> --docker-password <senha-administrador-registry> --docker-email <e-mail>` cria secret no ACR
