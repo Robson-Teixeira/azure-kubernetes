@@ -64,6 +64,9 @@
 - `az aks create -h` ajuda para o comando `aks create`
     - `az aks create --name <nome-k8s> --kubernetes-version "<versão>" --node-count <valor> --resource-group <nome-grupo-rg> --location eastus --generate-ssh-keys` cria cluster AKS. Especificado a versão, quantidade de máquinas, grupo de recursos, localização e a chave para a comunicação entre as máquinas e master
 - `az aks list --output table` listar clusters
+- `az aks scale --node-count <quantidade> --name <nome-registry> --resource-group <nome-grupo-rg>` alterar número de nós do cluster
+- `az aks get-upgrades -n <nome-registry> -g <nome-grupo-rg>` listar versão atual e versões disponíveis para atualização do cluster
+- `az aks upgrade -k "<versão>" -n <nome-registry> -g <nome-grupo-rg>` atualiza o cluster para a versão indicada
 - `az acr -h` ajuda para o comando
     - `az acr create -h` ajuda para o comando `acr create`
         - `az acr create --name <nome-registry> --resource-group <nome-grupo-rg> --sku Basic --location eastus` cria registro. Especificado grupo de recursos, tipo de armazenamento (_Basic_) e localização
