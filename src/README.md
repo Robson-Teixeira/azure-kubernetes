@@ -65,9 +65,12 @@
     - `az aks create --name <nome-k8s> --kubernetes-version "<versão>" --node-count <valor> --resource-group <nome-grupo-rg> --location eastus --generate-ssh-keys` cria cluster AKS. Especificado a versão, quantidade de máquinas, grupo de recursos, localização e a chave para a comunicação entre as máquinas e master
 - `az aks list --output table` listar clusters
 - `az acr -h` ajuda para o comando
-- `az acr create -h` ajuda para o comando `acr create`
-    - `az acr create --name <nome-registry> --resource-group <nome-grupo-rg> --sku Basic --location eastus` cria registro. Especificado grupo de recursos, tipo de armazenamento (_Basic_) e localização
-- `az acr login --name <nomeregistry>` login no ACR
+    - `az acr create -h` ajuda para o comando `acr create`
+        - `az acr create --name <nome-registry> --resource-group <nome-grupo-rg> --sku Basic --location eastus` cria registro. Especificado grupo de recursos, tipo de armazenamento (_Basic_) e localização
+    - `az acr login --name <nomeregistry>` login no ACR
+    - `az acr update -n <nome-registry> --admin-enabled true` ativar usuário administrador do registro
+    - `az acr credential -h` ajuda para o comando `acr credential`
+        - `az acr credential show --name <nome-registry>` listar credenciais do ACR (necessário usuário administrador ativo)
 - `docker tag <nome-usuário/nome-imagem>:versão <nomeregistry.azurecr.io>/<pasta>/<nome-imagem>:versão` registrar versão no ACR
 - `docker push <nomeregistry.azurecr.io>/<pasta>/<nome-imagem>:versão` subir versão para o ACR
 - `kubectl create secret docker-registry <nomeregistry.secret> --docker-server <nomeregistry.azurecr.io> --docker-username <usuário-administrador-registry> --docker-password <senha-administrador-registry> --docker-email <e-mail>` cria secret no ACR
