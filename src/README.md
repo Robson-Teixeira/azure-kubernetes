@@ -84,3 +84,6 @@
         >Nome do registro `nomeregistry.azurecr.io`
         >Criar grupo de recursos (caso não exista), por exemplo, `nome-rg`
         >Habilitar `Usuário administrador`
+
+## Custos
+- [AKS](https://azure.microsoft.com/en-us/pricing/details/kubernetes-service/)
