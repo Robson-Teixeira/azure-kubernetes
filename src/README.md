@@ -87,3 +87,4 @@
 
 ## Custos
 - [AKS](https://azure.microsoft.com/en-us/pricing/details/kubernetes-service/)
+- [Disco](https://azure.microsoft.com/en-us/pricing/details/managed-disks/)
